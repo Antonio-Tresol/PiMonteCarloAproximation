@@ -3,8 +3,8 @@
 CC=gcc
 XC=g++
 DEFS=
-CSTD=-std=gnu20
-XSTD=-std=gnu++20
+CSTD=-std=gnu11
+XSTD=-std=gnu++11
 FLAG=
 FLAGS=$(strip -Wall -Wextra $(FLAG) $(DEFS))
 FLAGC=$(FLAGS) $(CSTD)
@@ -42,7 +42,7 @@ OBJECTX=$(SOURCEX:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 OBJECTS=$(strip $(OBJECTC) $(OBJECTX))
 TESTINF=$(wildcard $(TST_DIR)/input*.txt)
 TESTOUT=$(TESTINF:$(TST_DIR)/input%.txt=$(OBJ_DIR)/output%.txt)
-INCLUDE=$(DIRS:%=-I%)
+INCLUDE=$(DIRS:%=-I%) -fopenmp
 DEPENDS=$(OBJECTS:%.o=%.d)
 IGNORES=$(BIN_DIR) $(OBJ_DIR) $(DOC_DIR)
 EXEFILE=$(BIN_DIR)/$(APPNAME)
