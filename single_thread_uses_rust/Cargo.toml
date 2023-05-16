@@ -1,5 +1,5 @@
 [package]
-name = "monohilo_uses_rust"
+name = "single_thread_uses_rust"
 version = "0.1.0"
 edition = "2021"
 
