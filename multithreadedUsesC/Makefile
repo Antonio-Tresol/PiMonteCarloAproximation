@@ -21,5 +21,6 @@ clean:
 	rm -rf bin
 
 gitignore:
-	echo target >> .gitignore
-	echo Cargo.lock >> .gitignore
+	echo bin >> .gitignore
+	echo build >> .gitignore
+	echo .vscode >> .gitignore
